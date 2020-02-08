@@ -22,7 +22,7 @@ for line in content:
 			else:
 				rna_seq+='\n'
 
-
+seq2 = rna_seq
 rna_seq=rna_seq.replace('\n','')
 
 sequence=rna_seq
@@ -39,7 +39,7 @@ Gln=['CAA', 'CAG']
 Glu=['GAA', 'GAG']
 Gly=['GGU', 'GGC', 'GGA', 'GGG']
 His=['CAU', 'CAC']
-Ile=['AUU', 'AUC', 'AUA']															#Assigning Codons to respective Amino Acids
+Ile=['AUU', 'AUC', 'AUA']									#Assigning Codons to respective Amino Acids
 Leu=['UUA', 'UUG', 'CUU', 'CUC', 'CUA', 'CUG']
 Lys=['AAA', 'AAG']
 Met=['AUG']
@@ -84,7 +84,7 @@ for i in range(0,numcodons):
 			
 		elif codon in Glu:
 			protein_seq=protein_seq+'E'
-																						#Assigning corresponding protein code for the codon
+														#Assigning corresponding protein code for the codon
 		elif codon in Gly:
 			protein_seq=protein_seq+'G'
 			
@@ -127,9 +127,9 @@ for i in range(0,numcodons):
 	a+=3
 
 
-with open("SAMPLE_OUTPUT.fa", mode='w') as thisfile:											#Writing to an output file
+with open("SAMPLE_OUTPUT.fa", mode='w') as thisfile:						#Writing to an output file
 	print("DNA sequence input:\n",content, file=thisfile)
-	print("\n >RNA SQUENCE\n*************\n",rna_seq,"\n\n", file=thisfile)
+	print("\n >RNA SQUENCE\n*************\n",seq2,"\n\n", file=thisfile)
 	print("\n >Protein SQUENCE\n*****************\n",protein_seq, file=thisfile)
 
 
